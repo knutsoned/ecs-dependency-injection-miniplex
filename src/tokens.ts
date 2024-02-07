@@ -2,6 +2,7 @@ import { token } from 'brandi'
 import type { Container } from 'brandi'
 
 import {
+	IECSManager,
 	IECSWorld,
 	IGameConfig,
 	IndexToTextureFunc,
@@ -46,4 +47,5 @@ export const CreateWalls = token<CreateWallsFunc>('create-walls-func')
 export const CreateLauncher = token<CreateLauncherFunc>('create-launcher-func')
 export const StartGame = token<StartGameFunc>('start-game-func')
 
+export const ECSManager = token<IECSManager>('ecs-manager')
 export const PhysicsEngine = token<Matter.Engine>('physics engine')

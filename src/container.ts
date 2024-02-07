@@ -3,6 +3,7 @@ import { createContainer } from 'brandi'
 import * as Token from './tokens'
 import {
 	gameUpdateCreator,
+	createECSManager,
 	createECSWorld,
 	indexToTexture,
 	createBricks,
@@ -95,6 +96,7 @@ const layout = [
 ]
 container.bind(Token.BricksLayout).toConstant(layout)
 container.bind(Token.GlobalState).toInstance(GlobalState).inContainerScope()
+container.bind(Token.ECSManager).toInstance(createECSManager).inContainerScope()
 container.bind(Token.ECSWorld).toInstance(createECSWorld).inContainerScope()
 container
 	.bind(Token.GameUpdate)
